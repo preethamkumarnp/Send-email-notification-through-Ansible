@@ -44,7 +44,7 @@ To set up your playbook, make sure to replace the placeholder values with your a
 2. Run the playbook using the following command:
 
    ```bash
-   ansible-playbook ping_and_notify.yml -i your_inventory_file
+   ansible-playbook -i your_inventory_file playbook.yml
 3. Replace your_inventory_file with your actual Ansible inventory file that lists the hosts you want to ping.
 
 ## Playbook Breakdown
