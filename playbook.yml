@@ -1,0 +1,18 @@
+---
+- hosts: all
+  become: false
+  tasks:
+    - name: Ping to server
+      ansible.builtin.ping:
+
+    - name: Send email through ansible
+      community.general.mail:
+        host: smtp.gmail.com
+        port: 587
+        username: your_email_address
+        password: apppassword/mailpassword
+        to: destination_mail_address
+        subject: Ansible-report
+        body: Ping has been succesfully provisioned
+        secure: starttls
+      delegate_to: localhost
