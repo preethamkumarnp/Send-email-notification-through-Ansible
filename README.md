@@ -2,14 +2,14 @@
 
 This Ansible playbook performs a simple ping to all specified hosts and sends an email notification upon successful execution.
 
-## Requirements
+# Requirements
 
 - Ansible 2.10 or higher
 - Internet access for sending emails
 - SMTP server credentials (Gmail in this case)
 - The `community.general` collection must be installed for the email module
 
-## Prerequisites
+# Prerequisites
 
 1. **Ansible Installation**: Ensure you have Ansible installed on your control machine. You can install it via pip:
 
@@ -21,8 +21,12 @@ This Ansible playbook performs a simple ping to all specified hosts and sends an
 3. Gmail Configuration:
    * Enable Less Secure Apps or use an App Password if 2-Step Verification is enabled.
 
-## Configuration
-# Playbook Configuration
+# App password generate 
+  * Go to your gmail and note if two step verification in enabled
+  * If enabled then create app password and copy the password
+  * Instead of your own password use App password in the place of your password in playbook 
+
+# Configuration
 
 To set up your playbook, make sure to replace the placeholder values with your actual information as follows:
 
@@ -47,7 +51,7 @@ To set up your playbook, make sure to replace the placeholder values with your a
    ansible-playbook -i your_inventory_file playbook.yml
 3. Replace your_inventory_file with your actual Ansible inventory file that lists the hosts you want to ping.
 
-## Playbook Breakdown
+# Playbook Breakdown
 
 * Ping Task
   - **Description**: Uses the `ansible.builtin.ping` module to check connectivity to the specified hosts.
